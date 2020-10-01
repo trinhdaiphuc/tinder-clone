@@ -8,8 +8,8 @@ const TinderCards = () => {
 
   useEffect(() => {
     (async () => {
-      const req = await Axios.get("/tinder/cards");
-      setPeople(req.data);
+      const req = await Axios.get("/cards");
+      setPeople(req.data.rows);
     })();
   }, []);
 
